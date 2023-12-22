@@ -1,9 +1,10 @@
 "use client";
 
 import { GlobalStyles } from "./GlobalStyles";
-import { Quote } from "./Quote";
+import { ButtonExample } from "./components/ButtonExample";
+import { Quote } from "./components/Quote";
 
-const Home = () => {
+const App = () => {
   return (
     <>
       <main>
@@ -14,6 +15,8 @@ const Home = () => {
           If you have not made any enemies in life, you&apos;ve been living too
           safely
         </Quote>
+        <hr />
+        <ButtonExample color="orange" />
       </main>
 
       <GlobalStyles />
@@ -21,4 +24,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default App;
