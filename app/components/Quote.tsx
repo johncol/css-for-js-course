@@ -7,7 +7,16 @@ type QuoteProps = React.PropsWithChildren<{
   source: string;
 }>;
 
-export const Quote: React.FC<QuoteProps> = (props) => {
+export const QuoteExample = () => (
+  <Quote
+    by="Academy Professor in the book If We Were Villains by M. L. Rio"
+    source="https://www.cloudlakeliterary.ca/blogposts/book-review-if-we-were-villains-by-m-l-rio"
+  >
+    If you have not made any enemies in life, you&apos;ve been living too safely
+  </Quote>
+);
+
+const Quote: React.FC<QuoteProps> = (props) => {
   return (
     <Figure>
       <Blockquote>{props.children}</Blockquote>
