@@ -1,6 +1,7 @@
 "use client";
 
 import { GlobalStyles } from "./GlobalStyles";
+import { BreadcrumbsExample } from "./components/Breadcrumbs";
 import { ButtonExample } from "./components/ButtonExample";
 import { Quote } from "./components/Quote";
 
@@ -15,8 +16,12 @@ const App = () => {
           If you have not made any enemies in life, you&apos;ve been living too
           safely
         </Quote>
+
         <hr />
         <ButtonExample color="orange" />
+
+        <hr />
+        <BreadcrumbsExample />
       </main>
 
       <GlobalStyles />
