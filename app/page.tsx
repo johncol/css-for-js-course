@@ -2,7 +2,7 @@
 
 import { GlobalStyles } from "./GlobalStyles";
 import { BreadcrumbsExample } from "./components/Breadcrumbs";
-import { ButtonExample } from "./components/Button";
+import { ButtonExample } from "./components/ButtonExample";
 import { QuoteExample } from "./components/Quote";
 
 const App = () => {
