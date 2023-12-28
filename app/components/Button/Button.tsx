@@ -23,39 +23,20 @@ export const Button: React.FC<ButtonProps> = ({
   return <StyledButton {...props} variant={variant} size={size} />;
 };
 
-const StyledButton = styled.button<ButtonOptions>`
+const BaseStyledButton = styled.button<ButtonOptions>`
   cursor: pointer;
   border-radius: 4px;
-
-  border: 2px solid transparent;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-
   font-family: Roboto, sans-serif;
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: -2%;
   text-transform: uppercase;
+`;
 
-  ${({ size }) => {
-    switch (size) {
-      case "small":
-        return css`
-          font-size: 16px;
-          padding: 8px 16px;
-        `;
-      case "medium":
-        return css`
-          font-size: 18px;
-          padding: 16px 24px;
-        `;
-      case "large":
-        return css`
-          padding: 20px 36px;
-          font-size: 21px;
-        `;
-    }
-  }}
+const VariantStyledButton = styled(BaseStyledButton)<ButtonOptions>`
+  border: 2px solid transparent;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 
   ${({ variant }) => {
     switch (variant) {
@@ -110,3 +91,27 @@ const StyledButton = styled.button<ButtonOptions>`
     }
   }}
 `;
+
+const SizeStyledButton = styled(VariantStyledButton)<ButtonOptions>`
+  ${({ size }) => {
+    switch (size) {
+      case "small":
+        return css`
+          font-size: 16px;
+          padding: 8px 16px;
+        `;
+      case "medium":
+        return css`
+          font-size: 18px;
+          padding: 16px 24px;
+        `;
+      case "large":
+        return css`
+          padding: 20px 36px;
+          font-size: 21px;
+        `;
+    }
+  }}
+`;
+
+const StyledButton = styled(SizeStyledButton)<ButtonOptions>``;
