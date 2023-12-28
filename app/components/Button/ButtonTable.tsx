@@ -86,6 +86,7 @@ export const ButtonTable = () => {
  * if you're disciplined!
  */
 const Table = styled.table`
+  margin: 10px;
   font-family: sans-serif;
 
   th,
